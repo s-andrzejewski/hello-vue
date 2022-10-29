@@ -1,12 +1,19 @@
 <template>
   <div>
-    <p>Hello World! :)</p>
+    <button @click="sayHello">Greet please</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'MyFirstComponent',
+  setup() {
+    const sayHello = () => {
+      alert("Hello user! Nice to meet you.");
+    }
+
+    return { sayHello };
+  }
 }
 </script>
 
